@@ -1,0 +1,15 @@
+using System;
+
+namespace proyecto_prueba
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Hola usuario, cual es tu nombre?");
+            String nombre = Console.ReadLine();
+            var fecha = DateTime.Now;
+            Console.WriteLine($"Hola de nuevo, {nombre}, la fecha de hoy es {fecha}");
+        }
+    }
+}
