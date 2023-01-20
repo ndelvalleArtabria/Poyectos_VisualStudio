@@ -1,0 +1,39 @@
+﻿<Window x:Class="proba_database_wpf.Dialogos.DllsWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:proba_database_wpf.Dialogos"
+        mc:Ignorable="d"
+        Title="DllsWindow" Height="450" Width="800" Activated="Window_Activated" Closing="Window_Closing">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="80"></RowDefinition>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="510"></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+
+        <!--Fila superior-->
+        <Canvas Grid.Row="0" Grid.Column="0">
+            <Label Content="Your Dlls" Width="auto" FontSize="30" Canvas.Left="80" Canvas.Top="20"></Label>
+        </Canvas>
+        <Canvas Grid.Row="0" Grid.Column="1">
+            <Label Name="lblUser" Width="auto" FontSize="16" Canvas.Left="20" Canvas.Top="35"></Label>
+        </Canvas>
+        
+        <!-- DataGrid coas dlls do usuario -->
+        <Canvas Grid.Row="1" Grid.Column="0">
+            <DataGrid x:Name="dgUserDlls" CanUserAddRows="False" CanUserDeleteRows="False" Canvas.Left="30" Canvas.Top="20" SelectionMode="Single" SelectionUnit="Cell"></DataGrid>
+        </Canvas>
+        <!--Botóns-->
+        <StackPanel Grid.Row="1" Grid.Column="1" Orientation="Vertical">
+            <Button x:Name="btnAddNewDll" Content="Add New Dll" Width="200" Height="45" Margin="20" Click="btnAddNewDll_Click"></Button>
+            <Button x:Name="btnRemoveSelectedDll" Content="Remove Selected Dll" Width="200" Height="45" Margin="20" Click="btnRemoveSelectedDll_Click"></Button>
+            <Button x:Name="btnUpdateSelectedDll" Content="Update Selected Dll" Width="200" Height="45" Margin="20" Click="btnUpdateSelectedDll_Click"></Button>
+            <Button x:Name="btnShowReport" Content="Show Report" Width="200" Height="45" Margin="15" Click="btnShowReport_Click"></Button>
+        </StackPanel>
+    </Grid>
+</Window>
